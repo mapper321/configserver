@@ -1,16 +1,14 @@
-server:
-  port: 8081
-
 spring:
-  application:
-    name: s1
   cloud:
     #ribbion不再维护，不推荐使用
     loadbalancer:
       ribbon:
         enabled: false
+    #允许客户端本地的配置文件覆盖配置中心的值
+    config:
+      override-none: true
   datasource:
-    url: jdbc:mysql://cdb-o742k9kc.bj.tencentcdb.com:10035/app?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    url: jdbc:mysql://cdb-o742k9kc.bj.tencentcdb.com:10035/app?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: mapper321
     # 使用druid数据源
