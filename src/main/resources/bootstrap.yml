@@ -1,0 +1,20 @@
+server:
+  port: 82
+spring:
+  application:
+    name: configserver
+  security:
+    user:
+      name: user
+      password: password123
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+#        git:
+#         uri: https://gitee.com/mapper321/bkcc-configpro
+#         searchPaths: application
+encrypt:
+  key: 123456
+
